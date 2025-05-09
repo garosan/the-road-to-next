@@ -1,3 +1,4 @@
+import { LucideCheckCircle, LucideFileText, LucidePencil } from "lucide-react";
 import Link from "next/link";
 import {
   Card,
@@ -11,9 +12,9 @@ import { initialTickets } from "@/data";
 import { ticketPath } from "@/paths";
 
 const TICKET_ICONS = {
-  OPEN: "O",
-  IN_PROGRESS: ">",
-  DONE: "X",
+  OPEN: <LucideFileText />,
+  DONE: <LucideCheckCircle />,
+  IN_PROGRESS: <LucidePencil />,
 };
 
 const TicketsPage = () => {
