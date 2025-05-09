@@ -1,16 +1,14 @@
-import clsx from "clsx";
 import Link from "next/link";
-import { initialTickets } from "@/data";
-import { ticketPath } from "@/paths";
 import {
   Card,
-  CardAction,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { initialTickets } from "@/data";
+import { ticketPath } from "@/paths";
 
 const TICKET_ICONS = {
   OPEN: "O",
@@ -27,6 +25,8 @@ const TicketsPage = () => {
           All your tickets at one place
         </p>
       </div>
+
+      <Separator />
 
       <div className="flex-1 flex flex-col items-center gap-y-4 animate-fade-from-top">
         {initialTickets.map((ticket) => (
